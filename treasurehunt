@@ -1,0 +1,35 @@
+var user = prompt ("So you're on a treasure hunt, and you have a couple of tools. Are you going to use your compass, shovel, or your flare?").toLowerCase();
+
+switch(user) {
+   case 'compass':
+	var compass = prompt ("Gonna use the compass huh? Do you know how to use it?").toLowerCase();
+	var eyes = prompt ("Do you have good vision?").toLowerCase();
+	if	(compass === 'yes' || eyes === 'yes'){
+		console.log ("Good vision is important to be able to see where the compass is pointing! You win!");
+	} else {
+		console.log ("Too bad, you lose!");
+	}
+	 break;
+	case 'shovel':
+	   var shovel = prompt ("Does your shovel have a handle?").toLowerCase();
+	   var strong = prompt ("Are you strong?").toLowerCase();
+	   if (shovel === 'yes' && strong === 'yes') {
+	    console.log ("Your strength and the shovel lead you to the treasure!");
+	   } else {
+	   	console.log ("You can't have one and not the other and win! You Lose!");
+	   }
+	   break;
+	case 'flare':
+		var works = prompt ("Did you check to see if the flare works?").toLowerCase();
+		var other = prompt ("Did you bring anything else with you?").toLowerCase();
+		if (works === 'yes' && other === 'yes') {
+			console.log("As long as your flare works and you brought other stuff... you didn't find the treasure but you did find your way home! You sorta lose?");
+		}
+		else {
+			console.log ("Too bad, you lose!");
+		}
+		break;
+	default:
+		console.log("I didn't understand that. Hit run again and try choosing either the compass, flare, or shovel!")
+		break;
+		}
